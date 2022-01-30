@@ -1,0 +1,42 @@
+.Terms_container{
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+}
+.Terms_container span{
+    color: yellow;
+}
+.FAQContainer h2{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.LineBoxx{
+    height: 4px;
+    width: 200px;
+    background-color: yellow;
+    margin-right: auto;
+    margin-left: auto;
+}
+.Aligner{
+    /* text-align: center; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.Terms_container h4{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.RULES_P{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    opacity: 1;
+    width: 90%;
+    margin-left: 5%;
+    text-align: justify;
+}

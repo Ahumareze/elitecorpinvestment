@@ -1,0 +1,29 @@
+.HowToInvest{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(214, 214, 214);
+    overflow: hidden;
+}
+.HTI_header{
+    padding-top: 25px;
+    padding-left: 20px;
+}
+.HTI_header h4{
+    font-weight: 400;
+}
+.HowToInvest .HTI_p{
+    font-weight: 500;
+    opacity: 0.6;
+}
+.Comp_Item{
+    width: 100%;
+    border-top: 1px solid yellow;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0.9;
+}

@@ -1,0 +1,100 @@
+.ForgetScreen{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: #03255C;
+}
+
+.ForgetDiv{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #fff;
+    margin-top: 10vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 7px;
+}
+.ForgetDiv h3{
+    margin-left: 20px;
+}
+.ForgetDiv input{
+    height: 45px;
+    width: 88%;
+    margin-left: 4%;
+    border: 1px solid #03255C;
+    border-radius: 7px;
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.ForgetPassword_Button{
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #03255C;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 7px;
+    margin-top: 20px;
+}
+.ForgetPassword_Button p{
+    color: #fff;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ForgetPasswordErrorBox{
+    height: 30px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.ForgetPasswordErrorBox p{
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.success_FD{
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+.success_FD2{
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.FG_back{
+    height: 45px;
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    border-radius: 7px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+.FG_back p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+/*********  21 savage ft drake **************/

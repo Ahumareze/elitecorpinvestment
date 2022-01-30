@@ -1,0 +1,63 @@
+.DashboardHeader{
+    background-color: #03255C;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    padding-top: 25px;
+}
+.BH_userProfile {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    padding-right: 40px;
+}
+.BH_ProfilePic{
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    margin-right: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.BH_ProfilePic img{
+    height: 100%;
+}
+.ChangeProfile_main{
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    z-index: 200;
+}
+.MainProfilePicDisplay{
+    height: 150px;
+    width: 150px;
+    border-radius: 80px;
+    background-color: #f0f0f0;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    overflow: hidden;
+}
+.MainProfilePicDisplay img{
+    height: 100%;
+}
+.ChangeProfile_main p{
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.ChangeProfile_main input{
+    height: 40px;
+    margin-top: 5px;
+}
+.Profile_canclebtn{
+    height: 50px;
+    width: 100%;
+}
+.Profile_canclebtn{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}

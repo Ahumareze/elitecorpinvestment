@@ -1,0 +1,15 @@
+.ErrorScreen{
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.ErrorScreen img{
+    width: 80%;
+    margin-top: 20vh;
+    margin-bottom: 50px;
+}
+.ErrorScreen p{
+    font-weight: 600;
+    opacity: 0.6;
+}

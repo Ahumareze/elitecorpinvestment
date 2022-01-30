@@ -1,0 +1,73 @@
+.Header{
+    /* height: 50px; */
+    width: 100%;
+    display: flex;
+    background-color: #03255C;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    z-index: 2;
+}
+.Logo_container{
+    height: 50px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.Logo_container2{
+    /* height: 50px; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-top: 20px;
+}
+.Logo_container img{
+    height: 45px;
+}
+.Header_icon{
+    margin-right: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.DropDownDiv{
+    min-height: 50px;
+    width: 100%;
+    background-color: #03255C;
+    overflow: hidden;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.DropDownDiv p{
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.top_fixer{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+}
+.Header_flexer{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Header_flexer p{
+    margin-right: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+.FA_line{
+    height: 25px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.FA_line p{
+    margin: 0;
+    color: #fff;
+}

@@ -1,0 +1,36 @@
+.Wa_section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.Wallets{
+    height: 100px;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgb(204, 204, 204);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.WA_container{
+    margin: 20px;
+    overflow: hidden;
+    display: grid;
+}
+.WA_container p{
+    font-size: 17px;
+    margin: 0;
+    width: 90%;
+}
+.WA_container h4{
+    margin-bottom: 5px;
+    width: 100%;
+}
+.WA_container h4 span{
+    font-weight: 400;
+}

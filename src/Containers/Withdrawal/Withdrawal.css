@@ -1,0 +1,83 @@
+.Withdrawal_page{
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.Withdraw_section{
+    height: 200px;
+    width: 90%;
+    margin-left: 5%;
+}
+.Pending_boxes{
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgb(165, 165, 165);
+    border-radius: 9px;
+}
+.PB_top{
+    height: 30px;
+    width: 90%;
+    padding-top: 10px;
+    padding-left: 15px;
+    overflow: hidden;
+}
+.PB_top p{
+    margin: 0;
+    font-weight: 600;
+    opacity: 0.8;
+}
+.PB_bottom{
+    width: 100%;
+    display: flex;
+    padding-top: 7px;
+}
+.PB_bottom_r{
+    height: 100%;
+    width: fit-content;
+    padding-right: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.PB_bottom_r img{
+    height: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.PB_bottom_r p{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+}
+.PB_bottom_l{
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+.PB_bottom_l p{
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+.PB_bottom_l span{
+    opacity: 0.7;
+    font-weight: 600;
+}
+.status_p{
+    opacity: 0.5;
+    margin: 0;
+    font-weight: 600;
+    float: right;
+    margin-top: 7px;
+}
+.pending_amount{
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.7;
+    text-align: center;
+}

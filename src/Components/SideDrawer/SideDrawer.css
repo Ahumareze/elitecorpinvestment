@@ -1,0 +1,90 @@
+.SideDrawer{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0%;
+}
+.SideDrawerMain{
+    height: 100vh;
+    width: 250px;
+    /* background-image: linear-gradient(to bottom, #2A1B5C, #544473 ); */
+    background-color: #03255C;
+    overflow: hidden;
+}
+.SideDrawerHeader{
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+.SD_username{
+    color: #fff;
+    margin-bottom: 5px;
+}
+.SD_email{
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.842);
+    margin: 0;
+    font-size: 16px;
+}
+
+.SideDrawer_main{
+    height: 200px;
+    width: 100%;
+    border: 1px solid transparent;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+.mainItem_container{
+    height: 50px;
+    width: 90%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.mainItem_container p{
+    margin: 0;
+    padding-left: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+}
+.logout_box{
+    height: 45px;
+    width: 70%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.logoutout_container{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 40vh;
+    align-items: center;
+}
+.logout_box p{
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+
+.SD_logocontainer{
+    width: 100%;
+    overflow: hidden;
+}
+.SD_logocontainer img{
+    width: 150px;
+    float: left;
+}
+
+.sd_icon{
+    margin-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
