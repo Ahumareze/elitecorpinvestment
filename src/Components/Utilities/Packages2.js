@@ -19,12 +19,12 @@ function Packages(props) {
                 </div>
             </div>
             <div className='Main_steps_container' style={{paddingTop: 10,paddingBottom: 10}}>
-                <p><span style={{fontWeight: 600}}>5</span> TRADES</p>
                 <p><span style={{fontWeight: 600}}>24HRS</span> Increment</p>
                 <p>Variable Mining Power</p>
                 <p>Shared Cloud Mining</p>
-                <p>7 Days Contract</p>
-                <p>{props.percent}% Daily Income</p>
+                <p>On Weekly ROI Model: {props.ROI}% Weekly </p>
+                <p>{props.weeks} Weeks Duration</p>
+                <p>{props.percent}% Referral Commission</p>
                 <p>Minimum Investment ${props.min}</p>
                 <p>Maximum Investment {props.max}</p>
             </div>

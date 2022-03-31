@@ -17,6 +17,9 @@ import AboutUs from './Containers/AboutUs/AboutUs';
 import Terms from './Containers/TermsAndConditions/Terms';
 import ForgetScreen from './Containers/ForgetScreen/ForgetScreen';
 import Dashboard2 from './Containers/Dashboard2/Dashboard2';
+import Dashboard3 from './Containers/Dashboard3/Dashboard3';
+import Dashboard4 from './Containers/Dashboard4/Dashboard4';
+import Portfolio from './Containers/Portfolio/Portfolio';
 
 function App(props) {
 
@@ -38,8 +41,11 @@ function App(props) {
 
   const auth2 = (
     <Switch>
-        <Route path='/dashboard' component={Dashboard} />
-        <Route path='/secondWallet' component={Dashboard2} />
+        <Route path='/portfolio' component={Portfolio} />
+        <Route path='/plan1' component={Dashboard} />
+        <Route path='/plan2' component={Dashboard2} />
+        <Route path='/plan3' component={Dashboard3} />
+        <Route path='/plan4' component={Dashboard4} />
         <Route path='/deposit' component={Deposit} />
         <Route path='/withdraw' component={Withdraw} />
         <Route path='/howToInvest' component={HowToInvest} />
@@ -49,7 +55,7 @@ function App(props) {
         <Route path='/terms' component={Terms} />
         <Route path='/referrals' component={Referrals} />
         <Route path='/' exact component={LandingPage}/>
-        <Redirect to='/dashboard' />
+        <Redirect to='/portfolio' />
     </Switch>
   )
 

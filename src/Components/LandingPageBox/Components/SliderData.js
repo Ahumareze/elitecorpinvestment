@@ -15,7 +15,7 @@ export const SliderData = [
         image: cg1,
         title: 'Elite Corp',
         tag: 'WE ARE THE',
-        content: 'Elite corp investment - The best way to passive income invest any amount to participate in profits from Crypto and Forex trading. You can earn up to 20% of your investment per day without any knowledge or experience.'
+        content: 'Elite corp investment - The best way to passive income, we are creating a business opportunity for investors who wishes to maximize digital currency and earn passively with little or no effort, and also aid our investors make their livestyle worth living without any left-out debt.'
     },
     {
         image: cg2,

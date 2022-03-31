@@ -185,10 +185,23 @@ form .btn .btn-layer{
   align-items: center;
   justify-content: center;
 }
+
+.btn-layerr{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background-color: #03255C;
+  border-radius: 5px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 form .btn:hover .btn-layer{
   left: 0;
 }
-.btn-layer p:hover{
+.btn-layerr p:hover{
   color: yellow;
 }
 form .btn p{
@@ -384,4 +397,29 @@ form .btn p{
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+.FG_back2{
+  height: 45px;
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  border-radius: 7px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  
+}
+.FG_back2 p{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.FGGG{
+  position: absolute;
+  bottom: 50px;
+  display: grid;
+  align-items: center;
+  width: 100%;
 }

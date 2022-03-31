@@ -29,7 +29,7 @@ function BalanceBox(props) {
         <div className='Balance_box' style={width > 900 ? {width: '23%', marginRight: '2%'} : null}>
             <div className='BB_1'>
                 <p className='BB_header'>{props.tag}</p>
-                <p className='BB_balance'>${props.price}</p>
+                <p className='BB_balance'>${props.price ? props.price : 0}</p>
             </div>
             <div className='BB_2'>
                 <div className='colored_box' style={{backgroundColor: props.color}}>

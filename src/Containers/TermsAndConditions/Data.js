@@ -61,11 +61,11 @@ const data = [
     },
     {
         label: "Referral Bonus",
-        property: "Earn 20% daily of every deposit made by people you referred sharing your affiliate link."
+        property: "Invite your family and friends to Elitecorp Investment and receive $5 instantly. Each member has a unique Elitecorp Investment referral code  to share with family and friends and receive 5% of your referral capital. If any one signs up with your referral code, he or she will be added to your referral program. Your referral code can be used to invite as many users as possible."
     },
     {
         label: "",
-        property: "These terms and conditions form part of the Agreement between the Client and ourselves. Your accessing of this website and/or undertaking of a booking or Agreement indicates your understanding, agreement to and acceptance, of the Disclaimer Notice and the full Terms and Conditions contained herein. Your statutory Consumer Rights are unaffected."
+        property: "Invite your family and friends to Elitecorp Investment and earn $5 instantly and more percentage referral bonuses according to the plan made by your referee, "
     }
 ];
 

@@ -42,7 +42,6 @@ function Dashboard(props) {
                 Object.keys(data).map((key, i) => {
                     if(data[key].email === email){
                         arr = {...data[key], key: key}
-                        console.log(arr)
                         setUser(arr);
                         localStorage.setItem('@key', key)
                         localStorage.setItem('@localUsername', data[key].fullname)
@@ -52,7 +51,6 @@ function Dashboard(props) {
             })
             .catch(e => {
                 setLoading(false);
-                console.log(e)
             })
     }
 
@@ -116,26 +114,19 @@ function Dashboard(props) {
             })
     }
 
-    const sendEmail = () => {
-        const data = {
-            'key': 'YOUR API KEY HERE',
-            'message': {
-              'from_email': 'YOUR@EMAIL.HERE',
-              'to': [
-                  {
-                    'email': 'RECIPIENT@EMAIL.HERE',
-                    'name': 'RECIPIENT NAME (OPTIONAL)',
-                    'type': 'to'
-                  }
-                ],
-              'autotext': 'true',
-              'subject': 'YOUR SUBJECT HERE!',
-              'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
-            }
-        };
-        axios.post('https://mandrillapp.com/api/1.0/messages/send.json', data)
-        .then(r => console.log(r))
-        .catch(e => console.log(e))
+    const postDeposit = (data) => {
+        const newData = {
+            ...data,
+            date: new Date().toDateString()
+        }
+        setLoading(true)
+        axios.post('https://elite-corp-default-rtdb.firebaseio.com/deposit.json', newData)
+            .then(r => {
+                setLoading(false);
+                setModal(true)
+            })
+            .catch(() => setLoading(false))
+        // setModal(true)
     }
 
     // let container = () => {
@@ -160,7 +151,7 @@ function Dashboard(props) {
                 }}>Close</div>
             </div>
         </div>
-    )
+    );
 
     let container = (
         <>
@@ -174,8 +165,8 @@ function Dashboard(props) {
                 <DepositBox 
                     title='Coin Details' 
                     boxes={['Coin Name', 'Amount', 'Email', 'Wallet Adderss']} 
-                    onClick={() => {
-                        setModal(true)
+                    onClick={(data) => {
+                        postDeposit(data)
                     } }
                     button='Invest'
                 />

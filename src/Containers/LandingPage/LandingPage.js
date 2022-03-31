@@ -53,6 +53,7 @@ import TextAreaInput from '../../Components/Utilities/TextAreaInput';
 import SliderWidget from '../../Components/TradingWidget/SliderWidget';
 import Converter from '../../Components/Converter/Converter';
 import AwesomeFacts from './AwesomeFacts.js';
+import MiniChart from '../../Components/TradingWidget/MiniChart';
 
 const width = window.innerWidth
 
@@ -75,7 +76,7 @@ function LandingPage(props) {
                     <div className='about_line' />
                 </div>
                 <div style={{display: 'grid', justifyContent: 'center', marginBottom: 30}}>
-                    <p style={{fontWeight: 600, textAlign: 'justify'}}>Bitcoin is a very exciting development; it might lead to a world currency. I think over th next decade it will grow to become one of the most important ways to pay for things and transfer assets.</p>
+                    <p style={{fontWeight: 600, textAlign: 'justify'}}>Bitcoin is a very exciting development; it might lead to a world currency. I think over the next decade it will grow to become one of the most important ways to pay for things and transfer assets.</p>
                     <p style={{fontWeight: 'bold', textAlign: 'justify'}}>- Kim Dotcom, CEO Megaupload</p>
                 </div>
             </section>
@@ -93,7 +94,7 @@ function LandingPage(props) {
                 </div>
                 <section style={width > 900 ? {display: 'flex'} : null }>
                     <div className='aboutus_about' style={width > 900 ? {width: '50%', marginRight: 30} : null }>
-                        <h3 style={{textAlign: 'center'}}>We Are Strategic And Awesome</h3>
+                        <h3 style={{textAlign: 'center'}}>We are Strategic and Awesome</h3>
                         <p>Elitecorp investment is an automated online investment platform that is a top secured and profitable option for you. Part of Elitecorpinvestment - the team of professional traders focusing mainly on Bitcoin and other cryptocurrencies trading over multiple Exchanges and markets. Headquartered in Massachusetts, Elitecorp investment is already becoming the Panam's fastest-growing FinTech company. Our name is synonymous with productive and profitable trading solutions where our investors need little to no trading experience at all. With Elitecorpinvestment, investors choose one of our three simple investment designs, make a deposit and sit back while our experts take the control.</p>
                         <div className='Read_More_button' onClick={() => props.history.push('/aboutus')}>
                             <p>Read More</p>
@@ -152,7 +153,7 @@ function LandingPage(props) {
                         <div className='about_line' />
                     </div>
                     <div style={{display: 'grid', justifyContent: 'center', width: '80%', marginLeft: '10%', textAlign: 'center'}}>
-                        <p style={{fontWeight: 600, color: 'rgb(59, 59, 59)', textAlign:'justify'}}>Using our master class strategy with our algorithm and automated trading bots and softwares we give our clients the best satisfaction by giving back to them 5times their investments after making profitable entries in the crypto market. Investing with Elitecorp gives you no reason to loss whether the market is Bearish or Bullish. Invest with us now and start earning daily from the comfort of your home.</p>
+                        <p style={{fontWeight: 600, color: 'rgb(59, 59, 59)', textAlign:'justify'}}>Using our master class strategy with our algorithm and automated trading bots and softwares we give our clients the best satisfaction by giving back to them 100% Return Of Investment (ROI) after making profitable entries in the crypto market. Investing with Elitecorp gives you no reason to loss whether the market is Bearish or Bullish. Invest with us now and start earning daily from the comfort of your home.</p>
                     </div>
                 </div>
                 <div className='Utitlty_container'>
@@ -189,10 +190,10 @@ function LandingPage(props) {
                     </div>
                 </div>
                 <div className='investment_packages_container'  style={width > 900 ? {display: 'flex'} : null }>
-                    <Packages2  num={'200'} title='BASIC' percent={20} min={'200'} max={'$999'} invest={invest} />
-                    <Packages2  num={'1,000'} title='ADVANCED' percent={25} min={'1,000'} max={'$9,999'} invest={invest} />
-                    <Packages2  num={'10,000'} title='PRO' percent={30} min={'10,000'} max={'$49,999'} invest={invest} />
-                    <Packages2  num={'50,000'} title='ULTRA' percent={35} min={'50,000'} max={'Unlimited'} invest={invest} />
+                    <Packages2  num={'200'} title='BASIC' percent={3} ROI={7} min={'200'} max={'$999'} invest={invest} weeks='Two' />
+                    <Packages2  num={'1,000'} title='ADVANCED' percent={6} ROI={12} min={'1,000'} max={'$9,999'} invest={invest} weeks='Three' />
+                    <Packages2  num={'10,000'} title='PRO' percent={9} min={'10,000'} ROI={17} max={'$49,999'} invest={invest} weeks='Four' />
+                    <Packages2  num={'50,000'} title='ULTRA' percent={12} min={'50,000'} ROI={22} max={'Unlimited'} invest={invest} weeks='Five' />
                 </div>
             </section>
             <section>

@@ -28,7 +28,7 @@ function ChartWidget(props) {
             }
         );
         document.getElementById("tradingview-widget-container").appendChild(script);
-    }
+    };
 
     return (
         <div className='tradingview-widget-container' id='tradingview-widget-container'>

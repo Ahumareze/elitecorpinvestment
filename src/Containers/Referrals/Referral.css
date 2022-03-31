@@ -1,5 +1,7 @@
 .RComponent{
     padding-top: 100px;
+    height: 2000px;
+    width: 100%;
 }
 .SecondWallet{
     width: 100%;
@@ -19,14 +21,30 @@
 }
 .RC_Boxes{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    margin-left: auto;
+    height: 300px;
     margin-top: 50px;
+}
+@media (max-width: 600px) {
+    .RC_Boxes{
+        display: inline-block;
+    }
 }
 .RC_Box1{
     width: 50%;
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+@media (max-width: 600px) {
+    .RC_Box1{
+        width: 350px;
+    }
 }
 .RC_Box2{
     width: 90%;
@@ -34,7 +52,7 @@
     border-radius: 15px;
     margin-right: auto;
     margin-left: auto;
-    box-shadow: 0 0 5px #cacaca;
+    border: 1px solid #dfdfdf;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -69,4 +87,89 @@
 .RC_Box2 p{
     font-weight: bold;
     font-size: 20px;
+}
+.RefScreenError{
+    padding-top: 30vh;
+    width: 100vw;
+    text-align: center;
+}
+.RefScreenError p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    padding-top: 10px;
+}
+.RefScreenError span{
+    font-size: 20px;
+}
+.IntroDetailsRC{
+    font-size: 15px;
+    padding-left: 20px;
+    opacity: 0.8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.IntroDetailsRC2{
+    font-size: 15px;
+    padding-left: 20px;
+    opacity: 0.8;
+    padding-top: 10px;
+}
+.R_Box_Users{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #cacaca;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+@media (min-width: 600px) {
+    .R_Box_Users{
+        width: 350px;
+    }
+}
+.RUsers{
+    height: 70px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+}
+.RuserTitle{
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+    margin-left: 10px;
+    background-color: #03255C;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.RuserDetails{
+    height: fit-content;
+    width: 100%;
+}
+.RUsn{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0%;
+    padding: 0;
+}
+.RSecond{
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    opacity: 0.6;
 }

@@ -10,6 +10,9 @@ import DepositBox from '../../Components/Utilities/DepositBox';
 import TradingViewWidget from 'react-tradingview-widget';
 
 import '../Dashboard/Dashboard.css';
+import './Withdraw.css';
+import WithItem from './WithItem';
+import WithContainer from './WithContainer';
 
 function Dashboard(props) {
 
@@ -41,8 +44,8 @@ function Dashboard(props) {
                 Object.keys(data).map((key, i) => {
                     if(data[key].email === email){
                         arr = {...data[key], key: key}
-                        console.log(arr)
                         setUser(arr);
+                        console.log(arr)
                         localStorage.setItem('@key', key)
                         localStorage.setItem('@localUsername', data[key].fullname)
                     }
@@ -51,50 +54,43 @@ function Dashboard(props) {
             })
             .catch(e => {
                 setLoading(false);
-                console.log(e)
             })
     }
 
     const openDrawer = () => {
         setDrawer(prev => !prev)
     }
-    const onInvest = (data) => {
+    const onInvest = (e) => {
+        const num = new Date().valueOf();
+        const date = new Date().toDateString()
         
-        if(!data.coinname || !data.amount || !data.wallet || !data.wallet){
-            setErrorMessage('Fields Missing')
-        }else if(data.amount.includes('$')){
-            setErrorMessage('Amount mustn\'t include $')
-        }else{
-            const datae = {
-                pending: {
-                    wallteId: data.recievingId,
-                    coin: data.coinname,
-                    amount: data.amount
-                },
-                ...user
-            };
-            setModal(true);
-            // axios.put('https://elite-corp-default-rtdb.firebaseio.com/users/' + user.key + '.json', datae )
-            //     .then(r => {
-            //         props.history.push('/withdrawals');
-            //     })
-            //     .catch(e => {
-            //         // console.log(typeof(e));
-            //         // setErrorMessage(e)
-            //     })
+        setLoading(true);
+
+        const transaction = {...user.transaction};
+        transaction[num] = {
+            coinname: e.coinname,
+            amount: e.amount,
+            wallet: e.recievingId,
+            walletName: e.wallet,
+            status: 'pending',
+            date: date,
+            network: e.network
         }
-        
+        const data = {
+            ...user,
+            transaction
+        }
+        axios.put('https://elite-corp-default-rtdb.firebaseio.com/users/' + user.key + '.json', data )
+            .then(r => {
+                console.log(r.data);
+                setLoading(false);
+                setModal(true);
+            })
+            .catch(e => {
+                console.log(e);
+                setLoading(false)
+            })
     }
-
-    // let container = () => {
-    //     return <Component user={user} openDrawer={openDrawer} onInvest={onInvest} errorMessage={errorMessage} />
-    // }
-
-    // if(!user){
-    //     container = () => {
-    //         return <Error />
-    //     }
-    // }
 
     const postImage = (img) => {
         const formData = new FormData()
@@ -132,7 +128,7 @@ function Dashboard(props) {
         <div className='DepModal'>
             <div className='DepModalMain'>
                 <div className='DepModalMainP'>
-                    <p>Kindly hold while your withdrawal is confirmed</p>
+                    <p>Kindly hold while your withdrawal is being processed </p>
                 </div>
                 <div className='DepModalMainBtn' onClick={() => {
                     setModal(false)
@@ -160,6 +156,10 @@ function Dashboard(props) {
                     errorMessage={errorMessage}
                     extraMessage='Note: To process your pending withdrawal 30% tax is to be charged on profit. Capital allowance of 25% is given to professional investors, while all other categories of investors pay the general tax or profit (30%) as stated in the terms and conditions. Contact the admins for more informations.'
                 />
+                <div className='WithdrawRequestsDiv'>
+                    <p className='WithdrawalHistoryTitle' >Withdrawal History</p>
+                    <WithContainer transaction={user && user.transaction} />
+                </div>
             </section>
             <div style={{ marginLeft: '20px', paddingTop: 50}}>
                 <TradingViewWidget symbol="ETHUSDT" />
@@ -167,7 +167,6 @@ function Dashboard(props) {
             {modal && DepModal}
         </>
     )
-
     
 
     const navigate = (destination) => {

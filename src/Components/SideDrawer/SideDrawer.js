@@ -41,14 +41,14 @@ function SideDrawer(props) {
                     <h3 className='SD_email'>{email}</h3>
                 </div>
                 <div className='SideDrawer_main'>
-                    <div className='mainItem_container' style={props.dashboard ? {backgroundColor: '#fff'} : null} onClick={() => props.navigate('dashboard')}>
+                    <div className='mainItem_container' style={props.dashboard ? {backgroundColor: '#fff'} : null} onClick={() => props.navigate('portfolio')}>
                         <MdHomeFilled style={props.dashboard ? {color: '#000'} : null} className='sd_icon' color='#fff' size={20} />
-                        <p style={props.dashboard ? {color: '#000'} : null}>Dashboard</p>
+                        <p style={props.dashboard ? {color: '#000'} : null}>Portfolio</p>
                     </div>
-                    <div className='mainItem_container' style={props.secondWallet ? {backgroundColor: '#fff'} : null}  onClick={() => props.navigate('secondWallet')}>
+                    {/* <div className='mainItem_container' style={props.secondWallet ? {backgroundColor: '#fff'} : null}  onClick={() => props.navigate('secondWallet')}>
                         <FaWallet style={props.secondWallet ? {color: '#000'} : null} className='sd_icon' color='#fff' size={20} />
                         <p style={props.secondWallet ? {color: '#000'} : null}>Second Wallet</p>
-                    </div>
+                    </div> */}
                     <div className='mainItem_container' style={props.deposit ? {backgroundColor: '#fff'} : null}  onClick={() => props.navigate('deposit')}>
                         <AiOutlineBank style={props.deposit ? {color: '#000'} : null} className='sd_icon' color='#fff' size={20} />
                         <p style={props.deposit ? {color: '#000'} : null}>Deposit</p>

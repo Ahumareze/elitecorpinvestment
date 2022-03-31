@@ -3,7 +3,7 @@ import emailJs from 'emailjs-com';
 import './LoginPage.css';
 import {connect} from 'react-redux';
 import * as actions from '../../Redux/Actions/Index';
-import {LOADING} from '../../Redux/Actions/ActionTypes';
+import {LOADING, VERIFY_SCREEN} from '../../Redux/Actions/ActionTypes';
 import Loading from '../../Components/Loading/Loading';
 import LoginError from './LoginError';
 import Captcha from './Captcha';
@@ -31,6 +31,7 @@ function LoginPage(props) {
     const [SignupEmail, setSignupEmail] = useState();
     const [SignupPassword, setSignupPassword] = useState();
     const [ConfirmPassword, setConfirmPassword]  = useState();
+    const [ReferallCode, setReferallCode] = useState();
 
     const [passwordError, setpasswordError] = useState(false);
 
@@ -54,7 +55,7 @@ function LoginPage(props) {
     }
 
     const submitSignup = () => {
-        props.mainsignup(SignupEmail, SignupPassword, SignupFullname)
+        props.mainsignup(SignupEmail, SignupPassword, SignupFullname, ReferallCode)
     }
 
     const form = useRef();
@@ -110,7 +111,7 @@ function LoginPage(props) {
                 <a>Forgot password? Click <span style={{color: 'yellow', fontWeight: 'bold'}} >here</span> to reset </a>
             </div>
             <div class="field btn">
-                <div class="btn-layer" onClick={submitLogin}>
+                <div class="btn-layerr" onClick={submitLogin}>
                     <p>Submit</p>
                 </div>
             </div>
@@ -136,7 +137,7 @@ function LoginPage(props) {
                 <input type="password" placeholder="Confirm password" required onChange={(e) => setConfirmPassword(e.target.value)} />
             </div>
             <div class="field">
-                <input type="numeric" placeholder="Referal Code (optional) " />
+                <input type="numeric" placeholder="Referal Code (optional) " onChange={(e) => setReferallCode(e.target.value)} />
             </div>
             <div class="field">
                 <select name="countries" id="cars" className='SelectInputField'>
@@ -151,7 +152,7 @@ function LoginPage(props) {
                 <Captcha />
             </section>
             <div class="field btn">
-                <div class="btn-layer" onClick={submitSignup}>
+                <div class="btn-layerr" onClick={submitSignup}>
                     <p>Submit</p>
                 </div>
             </div>
@@ -210,6 +211,14 @@ function LoginPage(props) {
                     <h2>A verification code has been sent to your email</h2>
                     <h3>{props.verifyScreen}</h3>
                 </div>
+                <div className='FGGG'>
+                    <div className='FG_back2' onClick={() => {
+                        props.closeScreen();
+                        setSignup(false)
+                    } } >
+                        <p>Back to login</p>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -240,9 +249,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return{
-        mainsignup: (email, password, fullname) => dispatch(actions.signup(email, password, fullname)),
+        mainsignup: (email, password, fullname, refCode) => dispatch(actions.signup(email, password, fullname, refCode)),
         mainLogin: (email, password) => dispatch(actions.login(email, password)),
-        setLoading: (value) => dispatch({type: LOADING, value: value})
+        setLoading: (value) => dispatch({type: LOADING, value: value}),
+        closeScreen: () => dispatch({type: VERIFY_SCREEN, value: false})
     }
 }
 

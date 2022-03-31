@@ -38,7 +38,7 @@ function Header({login, faq, aboutus, terms, home}) {
     const line = (
         <div className='Header_flexer'>
             <Line> <img src={hamburger} style={{width: 20}} onClick={showModal} style={{marginLeft: 10}} /> </Line>
-            <Line name='Dashboard' onClick={login}> <MdDashboard color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
+            <Line name='Portfolio' onClick={login}> <MdDashboard color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
             <Line name='Home' color='yellow' onClick={home}> <TiHome color='yellow' size={20} style={{marginLeft: 10}} /> </Line>
         </div>
     );
@@ -49,7 +49,7 @@ function Header({login, faq, aboutus, terms, home}) {
             <Line name='FAQs' onClick={faq}> <BiQuestionMark color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
             <Line name='About Us' onClick={aboutus} > <BiChat color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
             <Line name='Login' onClick={login}> <RiLoginCircleFill color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
-            <Line name='Dashboard' onClick={login}> <MdDashboard color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
+            <Line name='Portfolio' onClick={login}> <MdDashboard color='#fff' size={20} style={{marginLeft: 10}} /> </Line>
             <Line name='Home' color='yellow' onClick={home}> <TiHome color='yellow' size={20} style={{marginLeft: 10}} /> </Line>
         </div>
     );

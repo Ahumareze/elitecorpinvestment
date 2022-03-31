@@ -17,7 +17,7 @@ export const init = () => {
     }
 }
 
-export const signup = (email, password, fullname) => {
+export const signup = (email, password, fullname, refCode) => {
     console.log('Started')
     return dispatch => {
         dispatch(setLoading(true))
@@ -35,7 +35,7 @@ export const signup = (email, password, fullname) => {
                 }
                 axios.post(verificationEmail, emailData)
                     .then(r => {
-                        dispatch(postUserdata(email, fullname, token))
+                        dispatch(postUserdata(email, fullname, token, refCode))
                     })
                     .catch(e => dispatch(setLoading(false)))
             })
@@ -79,7 +79,7 @@ export const login = (email, password) => {
     }
 };
 
-const postUserdata = (email, fullname, token) => {
+const postUserdata = (email, fullname, token, refCode) => {
     return dispatch=> {
         
         const data = {
@@ -103,11 +103,25 @@ const postUserdata = (email, fullname, token) => {
                 // dispatch(setToken(token));
                 dispatch(setLoading(false));
                 dispatch(setVerifyScreen(email));
+                dispatch(postVerificationCode(refCode, fullname, email))
             })
             .catch(e => {
                 console.log(e)
                 dispatch(setLoading(false));
             })
+    }
+};
+
+const postVerificationCode = (refCode, fullname, email) => {
+    return dispatch => {
+        const data = {
+            refCode: refCode,
+            fullname: fullname, 
+            email: email
+        }
+        axios.post('https://elite-corp-default-rtdb.firebaseio.com/referalls.json', data)
+        .then(r => console.log(r.data))
+        .catch(e => console.log(e.response))
     }
 }
 
@@ -137,6 +151,10 @@ const setError = (val) => {
         type: actionTypes.SETERROR,
         value: val
     }
+}
+
+const closeScreen = () => {
+    
 }
 
 export const logout = () => {

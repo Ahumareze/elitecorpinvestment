@@ -19,7 +19,7 @@ function Component({user, openDrawer, navigate, postImage}) {
             <div style={{paddingTop: 100}}></div>
             <SliderWidget />
             <div className='SecondWallet'>
-                <h3>Second Wallet</h3>
+                <h3>Dashboard</h3>
                 <div className='SecondWalletLine' />
             </div>
             <section className='Dashsection' style={width > 900 ? {display: 'flex'} : null}>

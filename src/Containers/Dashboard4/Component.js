@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dashboard.css';
+import '../Dashboard/Dashboard.css';
 
 import TradingWidget from '../../Components/TradingWidget/TradingWidget';
 import BalanceBox from '../../Components/Utilities/BalanceBox';
@@ -9,7 +9,6 @@ import SliderWidget from '../../Components/TradingWidget/SliderWidget';
 
 import Countries from '../../Components/Elements/Countries';
 import Impressions from '../../Components/Elements/Impressions'; 
-import MiniChart from '../../Components/TradingWidget/MiniChart';
 
 const width = window.innerWidth;
 
@@ -24,10 +23,10 @@ function Component({user, openDrawer, navigate, postImage}) {
                 <div className='SecondWalletLine' />
             </div>
             <section className='Dashsection' style={width > 900 ? {display: 'flex'} : null}>
-                <BalanceBox tag='Account Balance' price={user ? user.balance: 0} color='#00B67A' />
-                <BalanceBox tag='Total Deposit' price={user ? user.deposited : 0} color='#FF420F' />
-                <BalanceBox tag='Total Earned' price={user ? user.profit : 0} color='#7A00FF' />
-                <BalanceBox tag='Total Withdrawn' price={user ? user.withdrawn : null} color='#00BBDD' />
+                <BalanceBox tag='Account Balance' price={user ? user.balance4: 0} color='#00B67A' />
+                <BalanceBox tag='Total Deposit' price={user ? user.deposited4 : 0} color='#FF420F' />
+                <BalanceBox tag='Total Earned' price={user ? user.profit4 : 0} color='#7A00FF' />
+                <BalanceBox tag='Total Withdrawn' price={user ? user.withdrawn4 : null} color='#00BBDD' />
             </section>
             <div style={{width: '90%', marginLeft: '5%', paddingBottom: 30}}>
                 <Countries />
